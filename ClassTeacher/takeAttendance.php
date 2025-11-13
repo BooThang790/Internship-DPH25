@@ -1,4 +1,3 @@
-
 <?php 
 error_reporting(0);
 include '../Includes/dbcon.php';
@@ -36,11 +35,6 @@ include '../Includes/session.php';
           }
         }
 
-  
-      
-
-
-
 if(isset($_POST['save'])){
     
     $admissionNo=$_POST['admissionNo'];
@@ -49,8 +43,7 @@ if(isset($_POST['save'])){
     $N = count($admissionNo);
     $status = "";
 
-
-//check if the attendance has not been taken i.e if no record has a status of 1
+  //check if the attendance has not been taken i.e if no record has a status of 1
   $qurty=mysqli_query($conn,"select * from tblattendance  where classId = '$_SESSION[classId]' and classArmId = '$_SESSION[classArmId]' and dateTimeTaken='$dateTaken' and status = '1'");
   $count = mysqli_num_rows($qurty);
 
@@ -83,11 +76,7 @@ if(isset($_POST['save'])){
                 }
           }
       }
-
-   
-
 }
-
 
 ?>
 
@@ -105,8 +94,6 @@ if(isset($_POST['save'])){
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
-
-
 
    <script>
     function classArmDropdown(str) {
@@ -158,7 +145,6 @@ if(isset($_POST['save'])){
             <div class="col-lg-12">
               <!-- Form Basic -->
 
-
               <!-- Input Group -->
         <form method="post">
             <div class="row">
@@ -166,7 +152,6 @@ if(isset($_POST['save'])){
               <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">All Student in (<?php echo $rrw['className'].' - '.$rrw['classArmName'];?>) Class</h6>
-                  <h6 class="m-0 font-weight-bold text-danger">Note: <i>Click on the checkboxes besides each student to take attendance!</i></h6>
                 </div>
                 <div class="table-responsive p-3">
                 <?php echo $statusMsg; ?>
