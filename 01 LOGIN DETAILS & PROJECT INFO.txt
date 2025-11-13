@@ -1,21 +1,17 @@
-**Log on to codeastro.com for more projects!***
+Database Name: attendancemsystem
 
-**Database Name: attendancemsystem**
-
-**Developed by Sodiq Ahmed**
-
-**Recommended PHP Version 5.6 and Newer**
+Developed by Kwadwo 
 
 
-**Admin Login Details**
+Admin Login Details
 
 Email   : admin@mail.com
 Password: Password@123
 
 
-**Teacher Login Details**
+Teacher Login Details
 
 Email   : jwood@mail.com
 Password: pass123
 
-**Default password for teacher's account: pass123**
+Default password for teacher's account: pass123
